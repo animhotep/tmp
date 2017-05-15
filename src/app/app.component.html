@@ -1,4 +1,13 @@
-<md-toolbar color="primary" class="mat-elevation-z6">
-  <span>{{title}}</span>
-</md-toolbar>
+<md-toolbar color="primary" class="mat-elevation-z6">Last posts</md-toolbar>
+
+<md-card *ngFor="let post of posts">
+  <md-card-header>{{post.title}}</md-card-header>
+  <md-card-content>{{post.body}}</md-card-content>
+  <md-card-actions>
+    <a md-button>VIEW</a>
+    <a md-button color="primary">EDIT</a>
+  </md-card-actions>
+</md-card>
+
+<h2 *ngIf="!posts">loading data...</h2>
 
