@@ -9,11 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 import {PostViewComponent} from "./posts/post-view/post-view.component";
 import {PostListComponent} from "app/posts/post-list/post-list.component";
+import { PostEditComponent } from './posts/post-edit/post-edit.component';
 
 
 const routes: Routes = [
   { path: '',  component: PostListComponent},
   { path: 'posts/:id',  component: PostViewComponent },
+  { path: 'posts/:id/edit',  component: PostEditComponent },
 ];
 
 @NgModule({
@@ -21,6 +23,7 @@ const routes: Routes = [
     AppComponent,
     PostListComponent,
     PostViewComponent,
+    PostEditComponent,
   ],
   imports: [
     BrowserModule,

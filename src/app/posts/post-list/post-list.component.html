@@ -3,7 +3,7 @@
   <md-card-content>{{post.body}}</md-card-content>
   <md-card-actions>
     <a routerLink="posts/{{post.id}}" md-button>VIEW</a>
-    <a md-button color="primary">EDIT</a>
+    <a routerLink="posts/{{post.id}}/edit" md-button color="primary">EDIT</a>
   </md-card-actions>
 </md-card>
 

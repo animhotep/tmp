@@ -1,0 +1,14 @@
+<md-card *ngIf="post">
+  <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
+  <md-input-container>
+    <textarea mdInput placeholder="Title" cols="100" [(ngModel)]="post.title" name="title" required> </textarea>
+  </md-input-container>
+  <hr>
+  <md-input-container>
+    <textarea mdInput placeholder="Body" cols="100" rows="5" [(ngModel)]="post.body" name="body"> </textarea>
+  </md-input-container>
+  <md-card-actions>
+    <button md-button color="primary">SAVE</button>
+  </md-card-actions>
+  </form>
+</md-card>
