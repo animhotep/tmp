@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Http} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 
-let postsUrl = 'http://jsonplaceholder.typicode.com/posts/';
+let postsUrl = 'https://jsonplaceholder.typicode.com/posts/';
 
 export class Post {
   id: number;
@@ -22,5 +22,11 @@ export class PostService {
     return this.http
       .get(postsUrl)
       .map(response => response.json() as Post[]);
+  }
+
+  getPost(id: number): Observable<Post> {
+    return this.http
+      .get(`${postsUrl}/${id}`)
+      .map(response => response.json() as Post);
   }
 }

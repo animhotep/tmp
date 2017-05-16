@@ -7,15 +7,20 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
+import {PostViewComponent} from "./posts/post-view/post-view.component";
+import {PostListComponent} from "app/posts/post-list/post-list.component";
 
 
 const routes: Routes = [
-  { path: 'tmp',  component: AppComponent},
+  { path: '',  component: PostListComponent},
+  { path: 'posts/:id',  component: PostViewComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
+    PostListComponent,
+    PostViewComponent,
   ],
   imports: [
     BrowserModule,
